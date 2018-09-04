@@ -25,6 +25,7 @@ class LibraryViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         displayLibraryItems()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func didReceiveMemoryWarning() {
