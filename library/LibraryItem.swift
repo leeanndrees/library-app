@@ -9,6 +9,6 @@
 import Foundation
 
 class LibraryItem {
-    var name = ""
-    var author = ""
+    var name: String = ""
+    var author: String = ""
 }

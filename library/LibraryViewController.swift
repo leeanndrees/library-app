@@ -15,6 +15,7 @@ class LibraryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        displayLibraryItems()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,7 @@ class LibraryViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryItem", for: indexPath)
+        cell.textLabel?.text = libraryItems[indexPath.row].name
         
         return cell
     }
@@ -40,6 +42,20 @@ class LibraryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         swipeToDelete(indexPath: indexPath)
+    }
+    
+    func displayLibraryItems() {
+        let booksAndAuthors = [
+            "Harry Potter": "J.K. Rowling",
+            "Children of Blood and Bone": "Tomi Adeyumi"
+        ]
+        
+        for item in booksAndAuthors {
+            let book = LibraryItem()
+            book.name = String(item.key)
+            book.author = String(item.value)
+            libraryItems.append(book)
+        }
     }
 
 }
