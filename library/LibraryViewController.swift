@@ -33,6 +33,14 @@ class LibraryViewController: UITableViewController {
         return cell
     }
 
+    func swipeToDelete(indexPath: IndexPath) {
+        libraryItems.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        swipeToDelete(indexPath: indexPath)
+    }
 
 }
 
