@@ -67,6 +67,20 @@ class LibraryViewController: UITableViewController {
             libraryItems.append(book)
         }
     }
+    
+    @IBAction func addItem(_ sender: Any) {
+        let newRowIndex = libraryItems.count
+        
+        let newItem = LibraryItem()
+        newItem.name = "I am new!"
+        newItem.author = "Someone new!"
+        libraryItems.append(newItem)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+    
 
 }
 
