@@ -57,7 +57,7 @@
         <!--Add Book-->
         <scene sceneID="0Ps-gL-TO1">
             <objects>
-                <tableViewController id="mrZ-LG-pxJ" sceneMemberID="viewController">
+                <tableViewController id="mrZ-LG-pxJ" customClass="AddBookViewController" customModule="library" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r49-j9-Ds3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,8 +78,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Book" largeTitleDisplayMode="never" id="OjD-7Y-6Ab">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="u8Z-rC-tux"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HnD-pP-uI9"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="u8Z-rC-tux">
+                            <connections>
+                                <action selector="cancel" destination="mrZ-LG-pxJ" id="Ck9-Ze-LbB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HnD-pP-uI9">
+                            <connections>
+                                <action selector="done" destination="mrZ-LG-pxJ" id="YBq-LY-5HH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gI6-YC-2aL" userLabel="First Responder" sceneMemberID="firstResponder"/>

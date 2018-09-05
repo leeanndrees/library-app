@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4366DFBB21407A2A0099F0B5 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366DFBA21407A2A0099F0B5 /* AddBookViewController.swift */; };
 		437C7E4C213F1DEF00AFF7AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C7E4B213F1DEF00AFF7AE /* AppDelegate.swift */; };
 		437C7E4E213F1DEF00AFF7AE /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C7E4D213F1DEF00AFF7AE /* LibraryViewController.swift */; };
 		437C7E51213F1DEF00AFF7AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437C7E4F213F1DEF00AFF7AE /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4366DFBA21407A2A0099F0B5 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		437C7E48213F1DEF00AFF7AE /* library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437C7E4B213F1DEF00AFF7AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437C7E4D213F1DEF00AFF7AE /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				437C7E4B213F1DEF00AFF7AE /* AppDelegate.swift */,
 				437C7E4D213F1DEF00AFF7AE /* LibraryViewController.swift */,
+				4366DFBA21407A2A0099F0B5 /* AddBookViewController.swift */,
 				437C7E4F213F1DEF00AFF7AE /* Main.storyboard */,
 				437C7E52213F1DF000AFF7AE /* Assets.xcassets */,
 				437C7E54213F1DF000AFF7AE /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				437C7E5E213F21D600AFF7AE /* LibraryItem.swift in Sources */,
+				4366DFBB21407A2A0099F0B5 /* AddBookViewController.swift in Sources */,
 				437C7E4E213F1DEF00AFF7AE /* LibraryViewController.swift in Sources */,
 				437C7E4C213F1DEF00AFF7AE /* AppDelegate.swift in Sources */,
 			);
