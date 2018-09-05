@@ -10,6 +10,7 @@ import UIKit
 
 class AddBookViewController: UITableViewController {
     @IBOutlet weak var userBookTitle: UITextField!
+    @IBOutlet weak var userBookAuthor: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
