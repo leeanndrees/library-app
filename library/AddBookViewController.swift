@@ -36,6 +36,14 @@ class AddBookViewController: UITableViewController {
         return nil
     }
     
+    func notDoneAlert() {
+        let notDoneAlert = UIAlertController(title: "Not Done Yet", message: "Please add both a title and an author.", preferredStyle: .alert)
+        let notDoneAlertAction = UIAlertAction(title: "OK I will!", style: .default, handler: nil)
+        notDoneAlert.addAction(notDoneAlertAction)
+        
+        present(notDoneAlert, animated: true, completion: nil)
+    }
+    
     func areWeDone() {
         let item = LibraryItem()
         if userBookTitle.text != "" && userBookAuthor.text != "" {
@@ -46,10 +54,10 @@ class AddBookViewController: UITableViewController {
             delegate?.addBookViewController(self, didFinishAdding: item)
         }
         else if userBookAuthor.text == "" {
-            print("author needed")
+            notDoneAlert()
         }
         else if userBookTitle.text == "" {
-            print("book title needed")
+            notDoneAlert()
         }
     }
 
