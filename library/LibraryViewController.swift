@@ -30,6 +30,7 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -55,7 +56,7 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryItem", for: indexPath)
-        cell.textLabel?.text = "\(libraryItems[indexPath.row].name), by \(libraryItems[indexPath.row].author)"
+        cell.textLabel?.text = libraryItems[indexPath.row].name
         
         return cell
     }
