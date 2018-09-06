@@ -17,7 +17,21 @@
 
 import UIKit
 
-class LibraryViewController: UITableViewController {
+class LibraryViewController: UITableViewController, AddBookViewControllerDelegate {
+    func addBookViewControllerDidCancel(_ controller: AddBookViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addBookViewController(_ controller: AddBookViewController, didFinishAdding item: LibraryItem) {
+        let newRowIndex = libraryItems.count
+        libraryItems.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     var libraryItems: [LibraryItem] = []
 

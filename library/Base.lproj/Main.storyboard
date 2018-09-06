@@ -45,7 +45,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QkR-Px-6uK">
                             <connections>
                                 <action selector="addItem:" destination="UlU-kT-3YJ" id="ZKx-eX-odQ"/>
-                                <segue destination="mrZ-LG-pxJ" kind="show" id="06A-zo-iB1"/>
+                                <segue destination="mrZ-LG-pxJ" kind="show" identifier="AddBook" id="06A-zo-iB1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -113,7 +113,7 @@
                                 <action selector="cancel" destination="mrZ-LG-pxJ" id="Ck9-Ze-LbB"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HnD-pP-uI9">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="HnD-pP-uI9">
                             <connections>
                                 <action selector="done" destination="mrZ-LG-pxJ" id="YBq-LY-5HH"/>
                             </connections>

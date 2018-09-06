@@ -8,9 +8,20 @@
 
 import UIKit
 
+protocol AddBookViewControllerDelegate: class {
+    
+    func addBookViewControllerDidCancel(_ controller: AddBookViewController)
+    
+    func addBookViewController(_ controller: AddBookViewController, didFinishAdding item: LibraryItem)
+}
+
 class AddBookViewController: UITableViewController {
+    
+    weak var delegate: AddBookViewControllerDelegate?
+    
     @IBOutlet weak var userBookTitle: UITextField!
     @IBOutlet weak var userBookAuthor: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +36,21 @@ class AddBookViewController: UITableViewController {
     }
 
     @IBAction func cancel() {
-        navigationController?.popViewController(animated: true)
+        delegate?.addBookViewControllerDidCancel(self)
     }
   
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        let item = LibraryItem()
+        item.name = userBookTitle.text!
+        
+        delegate?.addBookViewController(self, didFinishAdding: item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddBook" {
+            let controller = segue.destination as! AddBookViewController
+            controller.delegate = (self as! AddBookViewControllerDelegate)
+        }
     }
 
 }
