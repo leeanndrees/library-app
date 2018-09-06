@@ -25,6 +25,7 @@ class AddBookViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userBookTitle.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
