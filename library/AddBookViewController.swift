@@ -43,6 +43,7 @@ class AddBookViewController: UITableViewController {
     @IBAction func done() {
         let item = LibraryItem()
         item.name = userBookTitle.text!
+        item.author = userBookAuthor.text!
         
         delegate?.addBookViewController(self, didFinishAdding: item)
     }
