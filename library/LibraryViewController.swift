@@ -76,8 +76,13 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
     
     func displayLibraryItems() {
         let booksAndAuthors = [
-            "Harry Potter": "J.K. Rowling",
-            "Children of Blood and Bone": "Tomi Adeyumi"
+            "The Power": "Naomi Alderman",
+            "The Hate U Give": "Angie Thomas",
+            "Little Fires Everywhere": "Celeste Ng",
+            "A Study in Scarlet Women": "Sherry Thomas",
+            "Social Creature": "Tara Isabella Burton",
+            "Sourdough": "Robin Sloan",
+            "Children of Blood and Bone": "Tomi Adeyemi"
         ]
         
         for item in booksAndAuthors {
