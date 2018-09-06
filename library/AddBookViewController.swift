@@ -46,12 +46,5 @@ class AddBookViewController: UITableViewController {
         
         delegate?.addBookViewController(self, didFinishAdding: item)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddBook" {
-            let controller = segue.destination as! AddBookViewController
-            controller.delegate = self as? AddBookViewControllerDelegate
-        }
-    }
 
 }

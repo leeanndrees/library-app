@@ -60,6 +60,10 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     func swipeToDelete(indexPath: IndexPath) {
         libraryItems.remove(at: indexPath.row)
@@ -97,6 +101,12 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddBook" {
+            let controller = segue.destination as! AddBookViewController
+            controller.delegate = self as? AddBookViewControllerDelegate
+        }
+    }
 
 }
 
