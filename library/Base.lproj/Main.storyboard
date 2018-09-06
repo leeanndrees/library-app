@@ -120,6 +120,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="HnD-pP-uI9" id="U5R-5V-46A"/>
                         <outlet property="userBookAuthor" destination="MkH-XL-SGD" id="RI4-61-ZJh"/>
                         <outlet property="userBookTitle" destination="wgO-j1-yW2" id="cFb-eN-OmJ"/>
                     </connections>
