@@ -56,7 +56,7 @@ class LibraryViewController: UITableViewController, AddBookViewControllerDelegat
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryItem", for: indexPath)
-        cell.textLabel?.text = libraryItems[indexPath.row].name
+        cell.textLabel?.text = "\(libraryItems[indexPath.row].name), by \(libraryItems[indexPath.row].author)"
         
         return cell
     }
